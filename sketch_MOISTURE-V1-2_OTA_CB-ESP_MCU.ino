@@ -4,12 +4,13 @@ ESP8266/ESP-NodeMCO Moisture-Sensor-Module to MQTT - V1.2 OTA Version
 NodeMCU-Based IoT Project: Connecting YL-69 & YL-38 Moisture
 
 - Additional functions:
-* the intervall value for the sensor read can be adjusted via MQTT publish a new Millisecond value to this device: 
+* the intervall value for the sensor read can be adjusted via MQTT publish a new value to this device: 
   ** see INTERVALL_SUB_FEED
-  ** Default: 60000 ms = 1 min. interval at which to read sensor: can be updated by publish ../set_sensor_intervall
+  ** interval at which to read sensor: Default: 60000 ms = 1 min.  
+  ** updated by publish a Millisecond (ms) numeric value to ../set_sensor_intervall
  
-* the sensor can be resetted by MQTT publish a "1" to this device: see RESET_SUB_FEED
-  ** see: RESET_SUB_FEED[] PROGMEM = "yourname/home/IoT/" IOT_HOSTNAME "/reset_sensor";
+* the sensor can be resetted by MQTT publish to this device: see RESET_SUB_FEED
+  **  publish a "1" (numeric) to ../reset_sensor";
 
 What you have to adjust:
 
